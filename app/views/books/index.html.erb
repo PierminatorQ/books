@@ -8,7 +8,7 @@
 
   <div class="form-group">
 <%= f.label :state_eq, "Status" %>
-<%= f.select :state_eq, options_for_select(Book.statuses ,
+<%= f.select :state_eq, options_for_select(Book.statuses.keys ,
 @q.state_eq), {},{class: "form-control"} %>
 </div>
 
