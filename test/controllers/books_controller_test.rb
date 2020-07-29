@@ -5,12 +5,12 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
     @book = books(:one)
   end
 
-  test 'get index' do
-    get :index
+  test "get index" do
+    get books_url
     assert_response :success
     assert_template :index
-    assert_not_nil assigns(:posts)
-    end
+    assert_not_nil assigns(:books)
+  end
 
   test "should get index" do
     get books_url
